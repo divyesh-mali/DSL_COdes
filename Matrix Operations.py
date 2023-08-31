@@ -1,4 +1,4 @@
-#Program for addition of two matrix
+#Program for performing various matrix operations
 r=int(input("Enter no of rows:"))
 c=int(input("Enter no of columns"))
 def matcreate(r,c):

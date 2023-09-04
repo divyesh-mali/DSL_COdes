@@ -46,23 +46,31 @@ def low_mk():
            elif int(low)>int(mark_list[i]):
                 low = int(mark_list[i])
          
-       
-
-
-    print("The lowest marks is: ",low)       
+        print("The lowest marks is: ",low)       
 
 
 def high_mk():
 
-    high = mark_list[0]
-    if mark_list[0] == "a":
-        high = mark_list[1]
+   high = mark_list[0]
+   if mark_list[0] == "a":
+      high = mark_list[1]
+      for i in range(len(mark_list)):
+          if int(mark_list[i] == "a"):
+             continue
+             if int(high)<int(mark_list[i]):
+                high = int(mark_list[i])
+
+   elif mark_list[0] != "a":
         for i in range(len(mark_list)):
-            if int(mark_list[i] == "a"):
-               continue
-               if int(high)>int(mark_list[i]):
-                  high = int(mark_list[i])
-    print("The highest marks is: ",high)       
+           if int(mark_list[i] == "a"):
+              continue
+              if int(high)<int(mark_list[i]):
+                 high = int(mark_list[i])
+           elif int(high)<int(mark_list[i]):
+                high = int(mark_list[i])
+     
+
+        print("The highest marks is: ",high)       
 
 
 

@@ -42,7 +42,10 @@ def low_mk():
            if int(mark_list[i] == "a"):
               continue
               if int(low)>int(mark_list[i]):
-                   low = int(mark_list[i])
+                 low = int(mark_list[i])
+           elif int(low)>int(mark_list[i]):
+                low = int(mark_list[i])
+         
        
 
 

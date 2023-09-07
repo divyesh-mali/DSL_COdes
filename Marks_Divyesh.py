@@ -17,47 +17,34 @@ def absent():
 
 
 def highest_marks():
-    highest = marklist[0]
-    if marklist[0] == 'A':
-        highest = marklist[1]
-        for i in range(len(marklist)):
-            if int(marklist[i] == 'A'):
-                continue
-                if int(highest) < int(marklist[i]):
-                    highest = int(marklist[i])
+    for i in range(len(marklist)):
+        if marklist[i] != 'A':
+            highest = marklist[i]
+            break
 
-    elif marklist[0] != 'A':
-        for i in range(len(marklist)):
-            if int(marklist[i] == 'A'):
-                continue
-                if int(highest) < int(marklist[i]):
-                    highest = int(marklist[i])
-            elif int(highest) < int(marklist[i]):
-                highest = int(marklist[i])
-        print("The highest marks is: ", highest)
+    for i in range(len(marklist)):
+        if marklist[i] != 'A':
+            if marklist[i] > highest:
+                highest = marklist[i]
 
-
+    print("The highest marks is: ", highest)
 
 def lowest_marks():
-    lowest = marklist[0]
-    if marklist[0] == 'A':
-        lowest = marklist[1]
-        for i in range(len(marklist)):
-            if int(marklist[i] == 'A'):
-                continue
-                if int(lowest) > int(marklist[i]):
-                    lowest = int(marklist[i])
+    for i in range(len(marklist)):
+        if marklist[i] != 'A':
+            lowest = marklist[i]
+            break
 
-    elif marklist[0] != 'A':
-        for i in range(len(marklist)):
-            if int(marklist[i] == 'A'):
-                continue
-                if int(lowest) > int(marklist[i]):
-                    lowest = int(marklist[i])
-            elif int(lowest) > int(marklist[i]):
-                lowest = int(marklist[i])
+    for i in range(len(marklist)):
+        if marklist[i] != 'A':
+            if marklist[i] < lowest:
+                lowest = marklist[i]
 
-        print("The lowest marks is: ", lowest)
+    print("The lowest marks is: ", lowest)
+
+#def highest_freq():
+
+
 
 
 marklist=[]
@@ -88,5 +75,10 @@ while True:
     elif choice==4:
         highest_marks()
 
+    elif choice==5:
+        highest_freq()
+
+    elif choice==6:
+        break
 
 

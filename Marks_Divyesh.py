@@ -42,7 +42,17 @@ def lowest_marks():
 
     print("The lowest marks is: ", lowest)
 
-#def highest_freq():
+def highest_freq():
+    frequency = 0
+    count = 0  # initial will be equal to initial value of i from loop
+    initial = 0
+
+    for i in range(len(marklist)):
+        frequency = marklist.count(marklist[i])
+        if frequency > count:
+            count = frequency
+            initial = i
+    print("The highest frequency of ", marklist[initial], " is: ", count)
 
 
 

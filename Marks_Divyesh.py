@@ -52,7 +52,7 @@ def highest_freq():
         if frequency > count:
             count = frequency
             initial = i
-    print("The highest frequency of ", marklist[initial], " is: ", count)
+    print("The highest frequency of ", marklist[initial], " and it occurs ", count, " times.")
 
 
 

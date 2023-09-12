@@ -7,12 +7,12 @@
 '''
 
 
-def palindrome():
-    str = input("Enter the string: ")
+def palindrome(str):
+
     rev_str = ""
     for i in range(len(str), 0, -1):        #for i in range(initial val, final val, incrmt/decrmnt)
         rev_str = rev_str + str[i-1]        #Here [i-1] is taken because index starts from zero
-    print(rev_str)
+    print("The reverse string is:", rev_str)
 
 
     if rev_str ==  str:
@@ -20,14 +20,19 @@ def palindrome():
     else:
         print("The string ", str, " is not a palindrome.")
 
-
-print("1. Palindrome\n2. Frequency of given char in string\n3. Longest length word from the string\n"
-      "4. Frequency of each word\n5. Index of first substring\n6. Exit")
-choice = int(input("Enter the choice: "))
-
 while True:
-    if choice == 1:
-        palindrome()
+    print("1. Palindrome\n2. Frequency of given char in string\n3. Longest length word from the string\n"
+          "4. Frequency of each word\n5. Index of first substring\n6. Exit")
+    choice = int(input("Enter the choice: "))
 
-    if choice == 6:
+
+    if choice == 1:
+        str = input("Enter the string: ")
+        palindrome(str)
+
+    elif choice == 6:
         break
+
+    else:
+        print("Invalid Input !!")
+

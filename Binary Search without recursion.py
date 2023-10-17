@@ -23,11 +23,9 @@ for i in range(n):
 
     elif arr[mid] < key:
         low = mid + 1
-        # print("The element ", arr[mid], " is at position ", mid)
 
     elif arr[mid] > key:
         high = mid - 1
-        # print("The element ", arr[mid], " is at position ", mid)
 
 else:
     print("The element is not present !!")

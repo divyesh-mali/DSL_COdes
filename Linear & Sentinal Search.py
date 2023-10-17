@@ -30,7 +30,7 @@ def sentinal_search(roll_list, n, key):
     roll_list[n-1] = last
 
     if(i<n-1 or roll_list[n-1]):
-        print("The roll no is present at ", i," position")
+        print("The roll no ", roll_list[i], " is present at ", i," position")
     else:
         print("The roll no does not exist !!")
 
